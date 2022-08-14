@@ -5,6 +5,6 @@ Tiny CLI tool to preview terminal colour scheme
 
 ## Installation
 ```console
-$ cargo install https://github.com/Piturnah/tcols
-> cargo install https://github.com/Piturnah/tcols
+$ cargo install --git https://github.com/Piturnah/tcols
+> cargo install --git https://github.com/Piturnah/tcols
 ```
