@@ -3,17 +3,14 @@ use strum::IntoEnumIterator;
 
 fn main() {
     let col_width = Color::iter()
-        .enumerate()
-        .filter(|(i, _)| i < &(Color::iter().count() - 2))
-        .map(|(_, c)| format!("{c:?}").len())
+        .take(Color::iter().count() - 2)
+        .map(|c| format!("{c:?}").len())
         .max()
         .unwrap()
         + 2;
 
     for color in Color::iter()
-        .enumerate()
-        .filter(|(i, _)| i < &(Color::iter().count() - 2))
-        .map(|(_, c)| c)
+        .take(Color::iter().count() - 2)
     {
         println!(
             "{}{: <col_width$}{}{:?}{}",
